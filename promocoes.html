@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promoções - Pizza do Chefe</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Oswald:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="topo">
+    <div class="logo">
+        <img src="https://i.ibb.co/ycP76wK8/IMG-20251011-WA0000.jpg" alt="Logo Pizza do Chefe">
+    </div>
+
+    <button class="hamburger" aria-label="Abrir menu">
+        <div></div>
+        <div></div>
+        <div></div>
+    </button>
+
+    <nav class="menu">
+        <a href="index.html">Início</a>
+        <a href="cardapio.html">Cardápio</a>
+        <a href="promocoes.html">Promoções</a>
+        <a href="historia.html">Nossa História</a>
+        <a href="contato.html">Contato</a>
+    </nav>
+
+    <nav class="menu-mobile" id="menu-mobile">
+        <a href="index.html">Início</a>
+        <a href="cardapio.html">Cardápio</a>
+        <a href="promocoes.html">Promoções</a>
+        <a href="historia.html">Nossa História</a>
+        <a href="contato.html">Contato</a>
+    </nav>
+</header>
+
+<main class="promocoes-container">
+
+    <div class="titulo-pagina">
+        <h1>Ofertas Irresistíveis</h1>
+        <p>Economize e saboreie o melhor</p>
+    </div>
+
+    <div class="promo" style="background-image: url('https://i.ibb.co/MkrNGYZ6/images-6.jpg');">
+        <div class="promo-overlay"></div>
+        <div class="promo-content">
+            <h2 class="promo-titulo">Promoção do dia</h2>
+            <p class="promo-desc">1 Pizza Grande + 1 Refrigerante 2L</p>
+            <span class="promo-preco">Apenas R$ 50,00</span>
+            <button class="btn-pedido" onclick="abrirFormulario()">Peça agora</button>
+        </div>
+    </div>
+
+    <div class="promo" style="background-image: url('https://i.ibb.co/S4fKWW4f/Gemini-Generated-Image-axh9xeaxh9xeaxh9.png');">
+        <div class="promo-overlay"></div>
+        <div class="promo-content">
+            <h2 class="promo-titulo">Combo Família</h2>
+            <p class="promo-desc">2 Pizzas Médias + Refrigerante 2L</p>
+            <span class="promo-preco">Por R$ 75,00</span>
+            <button class="btn-pedido" onclick="abrirFormulario()">Peça agora</button>
+        </div>
+    </div>
+
+    <div class="promo" style="background-image: url('https://i.ibb.co/FbwsrGdg/Gemini-Generated-Image-onspelonspelonsp.png');">
+        <div class="promo-overlay"></div>
+        <div class="promo-content">
+            <h2 class="promo-titulo">Combo Amigos</h2>
+            <p class="promo-desc">2 Pizzas Grandes + 2 Refrigerantes 2L</p>
+            <span class="promo-preco">Por R$ 110,00</span>
+            <button class="btn-pedido" onclick="abrirFormulario()">Peça agora</button>
+        </div>
+    </div>
+
+</main>
+
+<div class="divisoria"></div>
+
+<section class="contato-info">
+    <p>📍 Rua das Pizzas, 123 - Centro, São Paulo - SP</p>
+    <p>📞 Telefone: (11) 3456-7890</p>
+    <p>💬 WhatsApp: (11) 98765-4321</p>
+    <p>✉️ Email: contato@pizzadochefe.com.br</p>
+</section>
+
+<footer>
+    <p>&copy; 2025 Pizza do Chefe — Todos os direitos reservados</p>
+</footer>
+
+<div class="modal" id="modalPedido">
+    <div class="modal-conteudo">
+        <span class="fechar" onclick="fecharFormulario()">&times;</span>
+        <h2>Finalizar Pedido</h2>
+        <form onsubmit="enviarPedido(event)">
+            <label>Nome Completo</label>
+            <input type="text" placeholder="Seu nome" required>
+            <label>Telefone</label>
+            <input type="tel" placeholder="(11) 99999-9999" required>
+            <label>Endereço</label>
+            <input type="text" placeholder="Rua, número e bairro" required>
+            <label>Forma de pagamento</label>
+            <select required>
+                <option value="">Selecione...</option>
+                <option>Dinheiro</option>
+                <option>Cartão</option>
+                <option>Pix</option>
+            </select>
+            <label>Qual a Promoção?</label>
+            <textarea rows="4" placeholder="Ex: Combo Família..." required></textarea>
+            <button type="submit" class="btn-enviar">Confirmar Pedido</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    const btn = document.querySelector(".hamburger");
+    const menuMobile = document.querySelector(".menu-mobile");
+    btn.addEventListener("click", () => menuMobile.classList.toggle("active"));
+
+    function abrirFormulario() {
+        document.getElementById("modalPedido").style.display = "flex";
+    }
+    function fecharFormulario() {
+        document.getElementById("modalPedido").style.display = "none";
+    }
+    function enviarPedido(e) {
+        e.preventDefault();
+        alert("Pedido da promoção enviado!");
+        fecharFormulario();
+    }
+    
+    window.onclick = function(event) {
+        if (event.target == document.getElementById("modalPedido")) {
+            fecharFormulario();
+        }
+    }
+</script>
+
+</body>
+</html>

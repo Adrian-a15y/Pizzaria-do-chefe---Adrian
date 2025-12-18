@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza do Chefe - Início</title>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Oswald:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="topo">
+    <div class="logo">
+        <img src="https://i.ibb.co/ycP76wK8/IMG-20251011-WA0000.jpg" alt="Logo Pizza do Chefe">
+    </div>
+
+    <button class="hamburger" aria-label="Abrir menu">
+        <div></div>
+        <div></div>
+        <div></div>
+    </button>
+
+    <nav class="menu">
+        <a href="index.html">Início</a>
+        <a href="cardapio.html">Cardápio</a>
+        <a href="promocoes.html">Promoções</a>
+        <a href="historia.html">Nossa História</a>
+        <a href="contato.html">Contato</a>
+    </nav>
+
+    <nav class="menu-mobile" id="menu-mobile">
+        <a href="index.html">Início</a>
+        <a href="cardapio.html">Cardápio</a>
+        <a href="promocoes.html">Promoções</a>
+        <a href="historia.html">Nossa História</a>
+        <a href="contato.html">Contato</a>
+    </nav>
+</header>
+
+<main>
+    <section class="principal">
+        <div class="slogan">
+            <h1>Pizza do Chefe</h1>
+            <p>Desde 2017 levando felicidade à sua mesa</p>
+        </div>
+    </section>
+
+    <div class="divisoria"></div>
+
+    <section class="destaques">
+        <h2>Nossas Favoritas</h2>
+        <div class="cards-pizza">
+
+            <div class="pizza-card">
+                <img src="https://revistamenu.com.br/wp-content/uploads/sites/24/2024/04/pizza-4-queijos-borda-lenha-divulgacao-easy-resizecom-1-1.jpg" alt="Pizza quatro queijos">
+                <div class="pizza-info">
+                    <h3>Quatro Queijos</h3>
+                    <button class="btn-pedir">Peça Agora</button>
+                </div>
+            </div>
+
+            <div class="pizza-card">
+                <img src="https://mmo.co.mz/wp-content/uploads/2024/09/Pizza-portuguesa-Receitas.webp" alt="Pizza portuguesa">
+                <div class="pizza-info">
+                    <h3>Portuguesa</h3>
+                    <button class="btn-pedir">Peça Agora</button>
+                </div>
+            </div>
+
+            <div class="pizza-card">
+                <img src="https://images.unsplash.com/photo-1628840042765-356cda07504e?q=80&w=600&auto=format&fit=crop" alt="Pizza de calabresa">
+                <div class="pizza-info">
+                    <h3>Calabresa</h3>
+                    <button class="btn-pedir">Peça Agora</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="divisoria"></div>
+
+    <section class="sobre-nos">
+        <div class="texto-sobre">
+            <h2>Sobre Nós</h2>
+            <p>
+                Desde 2017, a <strong>Pizza do Chefe</strong> transforma ingredientes frescos
+                em pizzas artesanais deliciosas. Aqui você encontra todos os sabores,
+                faz pedidos online e aproveita promoções exclusivas.
+            </p>
+        </div>
+        <img src="https://i.ibb.co/fzsBrvbV/metrus-pizzaria-de-lucas-do-rio-verde-esta-de-casa-nova-5dc45738cd351.jpg" alt="Foto da pizzaria">
+    </section>
+
+    <div class="divisoria"></div>
+
+    <section class="contato-info">
+        <p>📍 Rua das Pizzas, 123 - Centro, São Paulo - SP</p>
+        <p>📞 Telefone: (11) 3456-7890</p>
+        <p>💬 WhatsApp: (11) 98765-4321</p>
+        <p>✉️ Email: contato@pizzadochefe.com.br</p>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 Pizza do Chefe - Todos os direitos reservados</p>
+</footer>
+
+<script>
+    const btn = document.querySelector(".hamburger");
+    const menuMobile = document.querySelector(".menu-mobile");
+    const linksMobile = document.querySelectorAll(".menu-mobile a");
+
+    btn.addEventListener("click", () => {
+        menuMobile.classList.toggle("active");
+    });
+
+    linksMobile.forEach(link => {
+        link.addEventListener("click", () => {
+            menuMobile.classList.remove("active");
+        });
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nossa História - Pizza do Chefe</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Oswald:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="topo">
+    <div class="logo">
+        <img src="https://i.ibb.co/ycP76wK8/IMG-20251011-WA0000.jpg" alt="Logo Pizza do Chefe">
+    </div>
+
+    <button class="hamburger" aria-label="Abrir menu">
+        <div></div>
+        <div></div>
+        <div></div>
+    </button>
+
+    <nav class="menu">
+        <a href="index.html">Início</a>
+        <a href="cardapio.html">Cardápio</a>
+        <a href="promocoes.html">Promoções</a>
+        <a href="historia.html">Nossa História</a>
+        <a href="contato.html">Contato</a>
+    </nav>
+
+    <nav class="menu-mobile" id="menu-mobile">
+        <a href="index.html">Início</a>
+        <a href="cardapio.html">Cardápio</a>
+        <a href="promocoes.html">Promoções</a>
+        <a href="historia.html">Nossa História</a>
+        <a href="contato.html">Contato</a>
+    </nav>
+</header>
+
+<main>
+    <section class="historia-container">
+        
+        <div class="cabecalho-historia">
+            <h1>Nossa Trajetória</h1>
+            <div class="traco-decorativo"></div>
+        </div>
+
+        <div class="conteudo-historia">
+            <div class="texto-historia">
+                <p>Desde <strong>2017</strong>, a <strong>Pizza do Chefe</strong> tem o prazer de levar momentos de sabor e alegria à mesa de nossos clientes. Fundada por Fernanda, apaixonada por gastronomia, nossa pizzaria nasceu com a proposta de unir ingredientes frescos, preparo artesanal e um toque gourmet em cada receita.</p>
+
+                <p>Nosso cardápio reúne sabores tradicionais e criações exclusivas, pensadas para agradar todos os paladares — sempre com o compromisso de qualidade que faz da Pizza do Chefe uma referência entre os amantes de pizza.</p>
+
+                <blockquote>
+                    "Mais do que uma pizzaria, somos um espaço onde cada fatia conta uma história, feita com carinho e dedicação."
+                </blockquote>
+
+                <p>Ao longo dos anos, conquistamos a confiança e o carinho dos nossos clientes, ampliamos nosso cardápio e aperfeiçoamos o atendimento — sempre buscando oferecer uma experiência completa, seja no salão, no delivery ou em nossos pedidos online.</p>
+                
+                <p>Aqui, cada pedido é preparado como se fosse o primeiro: com amor, qualidade e o verdadeiro sabor da Pizza do Chefe.</p>
+            </div>
+
+            <div class="galeria-historia">
+                <figure>
+                    <img src="https://i.ibb.co/Y4zd6wG5/Gemini-Generated-Image-iugdf1iugdf1iugd.png" alt="Início da pizzaria">
+                    <figcaption>Nosso começo em 2017</figcaption>
+                </figure>
+                <figure>
+                    <img src="https://i.ibb.co/QjfG8StN/images-8.jpg" alt="Forno a lenha tradicional">
+                    <figcaption>Tradição e sabor autêntico</figcaption>
+                </figure>
+            </div>
+        </div>
+
+    </section>
+</main>
+
+<div class="divisoria"></div>
+
+<section class="contato-info">
+    <p>📍 Rua das Pizzas, 123 - Centro, São Paulo - SP</p>
+    <p>📞 Telefone: (11) 3456-7890</p>
+    <p>💬 WhatsApp: (11) 98765-4321</p>
+    <p>✉️ Email: contato@pizzadochefe.com.br</p>
+</section>
+
+<footer>
+    <p>&copy; 2025 Pizza do Chefe - Todos os direitos reservados</p>
+</footer>
+
+<script>
+    const btn = document.querySelector(".hamburger");
+    const menuMobile = document.querySelector(".menu-mobile");
+    const linksMobile = document.querySelectorAll(".menu-mobile a");
+
+    btn.addEventListener("click", () => {
+        menuMobile.classList.toggle("active");
+    });
+
+    linksMobile.forEach(link => {
+        link.addEventListener("click", () => {
+            menuMobile.classList.remove("active");
+        });
+    });
+</script>
+
+</body>
+</html>
